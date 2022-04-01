@@ -62,4 +62,12 @@ public class ProjectController {
         return "/project/update";
     }
 
+    @PostMapping("/update")
+    public String updateProject(ProjectDTO project){
+
+        projectService.update(project);
+
+        return "redirect:/project/create";
+    }
+
 }
